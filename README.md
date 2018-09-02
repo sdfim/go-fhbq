@@ -6,7 +6,7 @@ go-fhbq
  
  это версия скрипта python (https://github.com/sdfim/FHBQ-D) только на go
 
-использование
+usage
 -------------
 соответственно аналогично
 
@@ -32,4 +32,9 @@ new
 `$ ./go-fhbq.go -snifferDif`  <br>
 и с дополнительным флагом -ignore <br>
 `$ ./go-fhbq.go -snifferDif -ignore`  <br>
-
+ <br>
+есть  возможность получить status в json формате: <br>
+`$ ./go-fhbq.go -json status`  <br>
+используя флаг -timer можно смотреть длительность исполнения: <br>
+`$ ./go-fhbq.go -timer status`  <br>
+`$ ./go-fhbq.go -timer n 3 auto`  <br>
