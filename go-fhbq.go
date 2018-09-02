@@ -17,48 +17,48 @@ import (
 //as well as to display a hint of possible/valid commands
 var modes = map[string]string{
     "status":    "view current status",
-    "n 1 auto":  "mode: normal; speed: 1; bypass: auto;",
-    "n 2 auto":  "mode: normal; speed: 2; bypass: auto;",
-    "n 3 auto":  "mode: normal; speed: 3; bypass: auto;",
-    "n 1 on":    "mode: normal; speed: 1; bypass: on;",
-    "n 2 on":    "mode: normal; speed: 2; bypass: on;",
-    "n 3 on":    "mode: normal; speed: 3; bypass: on;",
-    "n 1 off":   "mode: normal; speed: 1; bypass: off;",
-    "n 2 off":   "mode: normal; speed: 2; bypass: off;",
-    "n 3 off":   "mode: normal; speed: 3; bypass: off;",
-    "ne 1 auto": "mode: normal exhaust; speed: 1; bypass: auto;",
-    "ne 3 auto": "mode: normal exhaust; speed: 3; bypass: auto;",
-    "ne 1 on":   "mode: normal exhaust; speed: 1; bypass: on;",
-    "ne 3 on":   "mode: normal exhaust; speed: 3; bypass: on;",
-    "ne 1 off":  "mode: normal exhaust; speed: 1; bypass: off;",
-    "ne 3 off":  "mode: normal exhaust; speed: 3; bypass: off;",
-    "ns 1 auto": "mode: normal supply; speed: 1; bypass: auto;",
-    "ns 3 auto": "mode: normal supply; speed: 3; bypass: auto;",
-    "ns 1 on":   "mode: normal supply; speed: 1; bypass: on;",
-    "ns 3 on":   "mode: normal supply; speed: 3; bypass: on;",
-    "ns 1 off":  "mode: normal supply; speed: 1; bypass: off;",
-    "ns 3 off":  "mode: normal supply; speed: 3; bypass: off;",
-    "s 1 auto":  "mode: save; speed: 1; bypass: auto;",
-    "s 2 auto":  "mode: save; speed: 2; bypass: auto;",
-    "s 3 auto":  "mode: save; speed: 3; bypass: auto;",
-    "s 1 on":    "mode: save; speed: 1; bypass: on;",
-    "s 2 on":    "mode: save; speed: 2; bypass: on;",
-    "s 3 on":    "mode: save; speed: 3; bypass: on;",
-    "s 1 off":   "mode: save; speed: 1; bypass: off;",
-    "s 2 off":   "mode: save; speed: 2; bypass: off;",
-    "s 3 off":   "mode: save; speed: 3; bypass: off;",
-    "se 1 auto": "mode: save exhaust; speed: 1; bypass: auto;",
-    "se 3 auto": "mode: save exhaust; speed: 3; bypass: auto;",
-    "se 1 on":   "mode: save exhaust; speed: 1; bypass: on;",
-    "se 3 on":   "mode: save exhaust; speed: 3; bypass: on;",
-    "se 1 off":  "mode: save exhaust; speed: 1; bypass: off;",
-    "se 3 off":  "mode: save exhaust; speed: 3; bypass: off;",
-    "ss 1 auto": "mode: save supply; speed: 1; bypass: auto;",
-    "ss 3 auto": "mode: save supply; speed: 3; bypass: auto;",
-    "ss 1 on":   "mode: save supply; speed: 1; bypass: on;",
-    "ss 3 on":   "mode: save supply; speed: 3; bypass: on;",
-    "ss 1 off":  "mode: save supply; speed: 1; bypass: off;",
-    "ss 3 off":  "mode: save supply; speed: 3; bypass: off;",
+    "n 1 auto":  "mode: normal; speed: 1; bypass: auto; ",
+    "n 2 auto":  "mode: normal; speed: 2; bypass: auto; ",
+    "n 3 auto":  "mode: normal; speed: 3; bypass: auto; ",
+    "n 1 on":    "mode: normal; speed: 1; bypass: on; ",
+    "n 2 on":    "mode: normal; speed: 2; bypass: on; ",
+    "n 3 on":    "mode: normal; speed: 3; bypass: on; ",
+    "n 1 off":   "mode: normal; speed: 1; bypass: off; ",
+    "n 2 off":   "mode: normal; speed: 2; bypass: off; ",
+    "n 3 off":   "mode: normal; speed: 3; bypass: off; ",
+    "ne 1 auto": "mode: normal exhaust; speed: 1; bypass: auto; ",
+    "ne 3 auto": "mode: normal exhaust; speed: 3; bypass: auto; ",
+    "ne 1 on":   "mode: normal exhaust; speed: 1; bypass: on; ",
+    "ne 3 on":   "mode: normal exhaust; speed: 3; bypass: on; ",
+    "ne 1 off":  "mode: normal exhaust; speed: 1; bypass: off; ",
+    "ne 3 off":  "mode: normal exhaust; speed: 3; bypass: off; ",
+    "ns 1 auto": "mode: normal supply; speed: 1; bypass: auto; ",
+    "ns 3 auto": "mode: normal supply; speed: 3; bypass: auto; ",
+    "ns 1 on":   "mode: normal supply; speed: 1; bypass: on; ",
+    "ns 3 on":   "mode: normal supply; speed: 3; bypass: on; ",
+    "ns 1 off":  "mode: normal supply; speed: 1; bypass: off; ",
+    "ns 3 off":  "mode: normal supply; speed: 3; bypass: off; ",
+    "s 1 auto":  "mode: save; speed: 1; bypass: auto; ",
+    "s 2 auto":  "mode: save; speed: 2; bypass: auto; ",
+    "s 3 auto":  "mode: save; speed: 3; bypass: auto; ",
+    "s 1 on":    "mode: save; speed: 1; bypass: on; ",
+    "s 2 on":    "mode: save; speed: 2; bypass: on; ",
+    "s 3 on":    "mode: save; speed: 3; bypass: on; ",
+    "s 1 off":   "mode: save; speed: 1; bypass: off; ",
+    "s 2 off":   "mode: save; speed: 2; bypass: off; ",
+    "s 3 off":   "mode: save; speed: 3; bypass: off; ",
+    "se 1 auto": "mode: save exhaust; speed: 1; bypass: auto; ",
+    "se 3 auto": "mode: save exhaust; speed: 3; bypass: auto; ",
+    "se 1 on":   "mode: save exhaust; speed: 1; bypass: on; ",
+    "se 3 on":   "mode: save exhaust; speed: 3; bypass: on; ",
+    "se 1 off":  "mode: save exhaust; speed: 1; bypass: off; ",
+    "se 3 off":  "mode: save exhaust; speed: 3; bypass: off; ",
+    "ss 1 auto": "mode: save supply; speed: 1; bypass: auto; ",
+    "ss 3 auto": "mode: save supply; speed: 3; bypass: auto; ",
+    "ss 1 on":   "mode: save supply; speed: 1; bypass: on; ",
+    "ss 3 on":   "mode: save supply; speed: 3; bypass: on; ",
+    "ss 1 off":  "mode: save supply; speed: 1; bypass: off; ",
+    "ss 3 off":  "mode: save supply; speed: 3; bypass: off; ",
     "off":       "off",
     "rhoff":     "rhoff",
     "rhon":      "rhon",
@@ -83,14 +83,14 @@ var blockT, unitT, checkT []byte
 func  readTelegram(s io.ReadWriteCloser, z string) {
     buf := readPack(s, 17)
     for {
-    if (z == "start" || z == "check") && reflect.DeepEqual(buf[:4], []byte{0x7e, 0x7e, 0xc0, 0xff}) {
-        break
+        if (z == "start" || z == "check") && reflect.DeepEqual(buf[:4], []byte{0x7e, 0x7e, 0xc0, 0xff}) {
+            break
         }else if z == "block" && reflect.DeepEqual(buf[:4], []byte{0x7e, 0x7e, 0x00, 0xa0}) {
-        break
+            break
         }else if z == "unit" && reflect.DeepEqual(buf[:4], []byte{0x7e, 0x7e, 0xa0, 0x00}) {
-        break
-    }else {
-        buf = readPack(s, 17)
+                break
+            }else {
+            buf = readPack(s, 17)
         }
     }
     if z == "start" || z == "check" { checkT = buf 
@@ -161,29 +161,29 @@ func runCommand (s io.ReadWriteCloser, cm []string) string {
         fmt.Println ("use rhon")
         rx[11] = '\xd0'
     }else {
-        if cm[2] == "auto"{  rx[9] = '\x8a'    }        //'bypass: auto; '
-        if cm[2] == "on"{  rx[9] = '\xaa'   }           //'bypass: on; '
-        if cm[2] == "off"{  rx[9] = '\xca'  }           //'bypass: off; '
+        if cm[2] == "auto"{  rx[9] = '\x8a'    }        //bypass: auto
+        if cm[2] == "on"{  rx[9] = '\xaa'   }           //bypass: on
+        if cm[2] == "off"{  rx[9] = '\xca'  }           //bypass: off
         if cm[0] == "n" || cm[0] == "ne" || cm[0] == "ns" {
             rx[13] = '\x20'
             //rx[13] = '\x00'
-            if cm[0] == "n" && cm[1] == "1" { rx[10] = '\x0c' }            //'mode: normal; speed: 1; '
-            if cm[0] == "n" && cm[1] == "2" { rx[10] = '\x12' }            //'mode: normal; speed: 2; '
-            if cm[0] == "n" && cm[1] == "3" { rx[10] = '\x21' }            //'mode: normal; speed: 3; '
-            if cm[0] == "ne" && cm[1] == "1" { rx[10] = '\x4a' }           //'mode: normal exhaust; speed: 1; '
-            if cm[0] == "ne" && cm[1] == "3" { rx[10] = '\x51' }           //'mode: normal exhaust; speed: 3; '
-            if cm[0] == "ns" && cm[1] == "1" { rx[10] = '\x94' }           // 'mode: normal supply; speed: 1; '
-            if cm[0] == "ns" && cm[1] == "3" { rx[10] = '\xa2' }           //'mode: normal supply; speed: 3; '
+            if cm[0] == "n" && cm[1] == "1" { rx[10] = '\x0c' }            //mode: normal; speed: 1
+            if cm[0] == "n" && cm[1] == "2" { rx[10] = '\x12' }            //mode: normal; speed: 2
+            if cm[0] == "n" && cm[1] == "3" { rx[10] = '\x21' }            //mode: normal; speed: 3
+            if cm[0] == "ne" && cm[1] == "1" { rx[10] = '\x4a' }           //mode: normal exhaust; speed: 1
+            if cm[0] == "ne" && cm[1] == "3" { rx[10] = '\x51' }           //mode: normal exhaust; speed: 3
+            if cm[0] == "ns" && cm[1] == "1" { rx[10] = '\x94' }           //mode: normal supply; speed: 1
+            if cm[0] == "ns" && cm[1] == "3" { rx[10] = '\xa2' }           //mode: normal supply; speed: 3
         }
         if cm[0] == "s" || cm[0] == "se" || cm[0] == "ss" {
             rx[13] = '\x10'
-            if cm[0] == "s" && cm[1] == "1" { rx[10] = '\x0c' }            //'mode: save; speed: 1; '
-            if cm[0] == "s" && cm[1] == "2" { rx[10] = '\x12' }            //'mode: save; speed: 2; '
-            if cm[0] == "s" && cm[1] == "3" { rx[10] = '\x21' }            //'mode: save; speed: 3; '
-            if cm[0] == "se" && cm[1] == "1" { rx[10] = '\x4a' }           //'mode: save exhaust; speed: 1; '
-            if cm[0] == "se" && cm[1] == "3" { rx[10] = '\x51' }           //'mode: save exhaust; speed: 3; '
-            if cm[0] == "ss" && cm[1] == "1" { rx[10] = '\x94' }           //'mode: save supply; speed: 1; '
-            if cm[0] == "ss" && cm[1] == "3" { rx[10] = '\xa2' }           //'mode: save supply; speed: 3; '
+            if cm[0] == "s" && cm[1] == "1" { rx[10] = '\x0c' }            //mode: save; speed: 1
+            if cm[0] == "s" && cm[1] == "2" { rx[10] = '\x12' }            //mode: save; speed: 2
+            if cm[0] == "s" && cm[1] == "3" { rx[10] = '\x21' }            //mode: save; speed: 3
+            if cm[0] == "se" && cm[1] == "1" { rx[10] = '\x4a' }           //mode: save exhaust; speed: 1
+            if cm[0] == "se" && cm[1] == "3" { rx[10] = '\x51' }           //mode: save exhaust; speed: 3
+            if cm[0] == "ss" && cm[1] == "1" { rx[10] = '\x94' }           //mode: save supply; speed: 1
+            if cm[0] == "ss" && cm[1] == "3" { rx[10] = '\xa2' }           //mode: save supply; speed: 3
         }
     }
     rx[16] = checkSum (rx[:16])
@@ -196,8 +196,11 @@ func runCommand (s io.ReadWriteCloser, cm []string) string {
         if err != nil {
         fmt.Printf("s.Write: %v", err)
         }
+
+        //test
+        readTelegram(s, "check")
+
         checkStatus := getStatus()
-        checkStatus = strings.TrimRight(checkStatus, " ")
         cmString := strings.Join(cm, " ")
         fmt.Println(checkStatus)
 
@@ -272,6 +275,7 @@ func main() {
         }
         fmt.Println(time.Now().Sub(start))
     }
+    
     //sniffer outputs packets of telegrams, if there were changes in the stream
     //if is set flag -ignore, change with unit telegram will be ignore
     if snifferDif > 0 {
@@ -315,9 +319,7 @@ func main() {
                 b = bc
                 u = uc
                 c = cc
-                //fmt.Println("paket:", sn, "NEW COMMAND -> ", com)
                 color.Green("%s", "paket: "+strconv.Itoa(sn)+" NEW COMMAND "+strconv.Itoa(num)+"  ->  "+com)
-                //fmt.Println(time.Now().Format(time.RFC850))
                 fmt.Println("time:   ", time.Now().Format("15:04:05.000000"))
                 fmt.Printf("block:   % x\n", b)
                 fmt.Printf("unit:    % x\n", u)
@@ -357,4 +359,3 @@ func main() {
     }
 
 }
-
