@@ -10,26 +10,26 @@ go-fhbq
 -------------
 соответственно аналогично
 
-`$ go run go-fhbq.go <режим>`
-наприклад: 
-`$ go run go-fhbq.go n 1 auto` 
-тобто нормальный мод, 1-а швидкість, байпас - авто 
-
-перевірка поточного статусу: 
-`$ go run go-fhbq.go status` 
-
-всі доступні режими можна подивитися так: 
-`$ go run go-fhbq.go -valid` 
+`$ go run go-fhbq.go <режим>` <br>
+наприклад:  <br>
+`$ go run go-fhbq.go n 1 auto`  <br>
+тобто нормальный мод, 1-а швидкість, байпас - авто  <br>
+ <br>
+перевірка поточного статусу:  <br>
+`$ go run go-fhbq.go status`  <br>
+ <br>
+всі доступні режими можна подивитися так:  <br>
+`$ go run go-fhbq.go -valid`  <br>
 
 new
 ---
-добавлены флаги, которые можно посмотреть: 
-`$ go run go-fhbq.go -help` 
-
-есть два сниффера:
-`$ ./go-fhbq.go -sniffer` 
-и 
-`$ ./go-fhbq.go -snifferDif` 
-и дополнительным флагом -ignore
-`$ ./go-fhbq.go -snifferDif -ignore` 
+добавлены флаги, которые можно посмотреть:  <br>
+`$ go run go-fhbq.go -help`  <br>
+ <br>
+есть два сниффера: <br>
+`$ ./go-fhbq.go -sniffer`  <br>
+и  <br>
+`$ ./go-fhbq.go -snifferDif`  <br>
+и дополнительным флагом -ignore <br>
+`$ ./go-fhbq.go -snifferDif -ignore`  <br>
 
