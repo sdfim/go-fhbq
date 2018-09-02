@@ -162,28 +162,28 @@ func runCommand (s io.ReadWriteCloser, cm []string) string {
         rx[11] = '\xd0'
     }else {
         if cm[2] == "auto"{  rx[9] = '\x8a'    }        //'bypass: auto; '
-        if cm[2] == "on"{  rx[9] = '\xaa'   }        //'bypass: on; '
-        if cm[2] == "off"{  rx[9] = '\xca'  }        //'bypass: off; '
+        if cm[2] == "on"{  rx[9] = '\xaa'   }           //'bypass: on; '
+        if cm[2] == "off"{  rx[9] = '\xca'  }           //'bypass: off; '
         if cm[0] == "n" || cm[0] == "ne" || cm[0] == "ns" {
             rx[13] = '\x20'
             //rx[13] = '\x00'
             if cm[0] == "n" && cm[1] == "1" { rx[10] = '\x0c' }            //'mode: normal; speed: 1; '
             if cm[0] == "n" && cm[1] == "2" { rx[10] = '\x12' }            //'mode: normal; speed: 2; '
             if cm[0] == "n" && cm[1] == "3" { rx[10] = '\x21' }            //'mode: normal; speed: 3; '
-            if cm[0] == "ne" && cm[1] == "1" { rx[10] = '\x4a' }        //'mode: normal exhaust; speed: 1; '
-            if cm[0] == "ne" && cm[1] == "3" { rx[10] = '\x51' }        //'mode: normal exhaust; speed: 3; '
-            if cm[0] == "ns" && cm[1] == "1" { rx[10] = '\x94' }        // 'mode: normal supply; speed: 1; '
-            if cm[0] == "ns" && cm[1] == "3" { rx[10] = '\xa2' }        //'mode: normal supply; speed: 3; '
+            if cm[0] == "ne" && cm[1] == "1" { rx[10] = '\x4a' }           //'mode: normal exhaust; speed: 1; '
+            if cm[0] == "ne" && cm[1] == "3" { rx[10] = '\x51' }           //'mode: normal exhaust; speed: 3; '
+            if cm[0] == "ns" && cm[1] == "1" { rx[10] = '\x94' }           // 'mode: normal supply; speed: 1; '
+            if cm[0] == "ns" && cm[1] == "3" { rx[10] = '\xa2' }           //'mode: normal supply; speed: 3; '
         }
         if cm[0] == "s" || cm[0] == "se" || cm[0] == "ss" {
             rx[13] = '\x10'
             if cm[0] == "s" && cm[1] == "1" { rx[10] = '\x0c' }            //'mode: save; speed: 1; '
             if cm[0] == "s" && cm[1] == "2" { rx[10] = '\x12' }            //'mode: save; speed: 2; '
             if cm[0] == "s" && cm[1] == "3" { rx[10] = '\x21' }            //'mode: save; speed: 3; '
-            if cm[0] == "se" && cm[1] == "1" { rx[10] = '\x4a' }        //'mode: save exhaust; speed: 1; '
-            if cm[0] == "se" && cm[1] == "3" { rx[10] = '\x51' }        //'mode: save exhaust; speed: 3; '
-            if cm[0] == "ss" && cm[1] == "1" { rx[10] = '\x94' }        //'mode: save supply; speed: 1; '
-            if cm[0] == "ss" && cm[1] == "3" { rx[10] = '\xa2' }        //'mode: save supply; speed: 3; '
+            if cm[0] == "se" && cm[1] == "1" { rx[10] = '\x4a' }           //'mode: save exhaust; speed: 1; '
+            if cm[0] == "se" && cm[1] == "3" { rx[10] = '\x51' }           //'mode: save exhaust; speed: 3; '
+            if cm[0] == "ss" && cm[1] == "1" { rx[10] = '\x94' }           //'mode: save supply; speed: 1; '
+            if cm[0] == "ss" && cm[1] == "3" { rx[10] = '\xa2' }           //'mode: save supply; speed: 3; '
         }
     }
     rx[16] = checkSum (rx[:16])
