@@ -30,6 +30,6 @@ new
 `$ ./go-fhbq.go -sniffer`  <br>
 и  <br>
 `$ ./go-fhbq.go -snifferDif`  <br>
-и дополнительным флагом -ignore <br>
+и с дополнительным флагом -ignore <br>
 `$ ./go-fhbq.go -snifferDif -ignore`  <br>
 
