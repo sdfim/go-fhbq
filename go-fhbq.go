@@ -66,7 +66,7 @@ var modes = map[string]string{
 
 //read k byte
 func  readPack(s io.ReadWriteCloser, k int)  []byte {
-	bf := make([]byte, 0)
+	var bf []byte
 	reader := bufio.NewReader(s)
 	var rep byte
 	for i:=0; i<k; i++ {
